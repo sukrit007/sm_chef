@@ -5,3 +5,6 @@ description      "Installs/Configures block_device_ext"
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
 depends		 "block_device"
 version          "0.0.1"
+
+recipe  "block_device_ext::default", "Default recipe for block_device_ext"
+
