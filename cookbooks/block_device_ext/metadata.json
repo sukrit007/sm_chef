@@ -1,0 +1,31 @@
+{
+  "dependencies": {
+    "block_device": ">= 0.0.0"
+  },
+  "name": "block_device_ext",
+  "maintainer_email": "sukrit007@gmail.com",
+  "attributes": {
+  },
+  "license": "All rights reserved",
+  "suggestions": {
+  },
+  "platforms": {
+  },
+  "maintainer": "Pearson",
+  "long_description": "Description\n===========\n\nRequirements\n============\n\nAttributes\n==========\n\nUsage\n=====\n\n",
+  "version": "0.0.1",
+  "recommendations": {
+  },
+  "recipes": {
+    "block_device_ext::default": "Default recipe for block_device_ext"
+  },
+  "groupings": {
+  },
+  "conflicting": {
+  },
+  "replacing": {
+  },
+  "description": "Installs/Configures block_device_ext",
+  "providing": {
+  }
+}
