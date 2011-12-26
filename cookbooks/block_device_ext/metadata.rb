@@ -55,6 +55,15 @@ setup_cron_recipes = [
                 "block_device::setup_continuous_backups_cloud_files"
                 ]
 
+attribute "block_device_ext/mode",
+  :display_name => "Block Device Mode (create or restore)", 
+  :description => "Mode for Block Device Ext. create: creates new block store    restore: restore from existing snapshot",
+  :required => true,
+  :choice => ["create", "restore"],
+  :type => "string",  
+  :recipes => ["block_device::default"]
+
+
 attribute "block_device/timestamp_override",
   :display_name => "Restore Timestamp Override", 
   :description => "Another optional variable to restore from a specific timestamp. Specify a string matching the timestamp tags on the volume snapshot set.  You will need to specify the timestamp that's defined by the snapshot's tag (not name).  For example, if the snapshot's tag is 'rs_backup:timestamp=1303613371' you would specify '1303613371' for this input.",

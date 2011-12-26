@@ -105,6 +105,20 @@
       "display_name": "Aws Secret Access Key",
       "description": "In order to write the dump file to the specified cloud storage location, you will need to provide cloud authentication credentials. For Amazon S3, use AWS_SECRET_ACCESS_KEY."
     },
+    "block_device_ext/mode": {
+      "required": "required",
+      "calculated": false,
+      "choice": [
+        "create",
+        "restore"
+      ],
+      "type": "string",
+      "recipes": [
+        "block_device::default"
+      ],
+      "display_name": "Block Device Mode (create or restore)",
+      "description": "Mode for Block Device Ext. create: creates new block store    restore: restore from existing snapshot"
+    },
     "block_device/volume_size": {
       "required": "optional",
       "calculated": false,
