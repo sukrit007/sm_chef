@@ -14,5 +14,5 @@ if node[:block_device][:storage_type] == "create"
 	include_recipe "block_device::setup_block_device"
 else
 	include_recipe "block_device::do_restore"
-fi
+end
 	
