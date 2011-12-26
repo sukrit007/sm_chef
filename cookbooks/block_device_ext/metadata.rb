@@ -55,13 +55,13 @@ setup_cron_recipes = [
                 "block_device::setup_continuous_backups_cloud_files"
                 ]
 
-attribute "block_device_ext/mode",
-  :display_name => "Block Device Mode (create or restore)", 
+attribute "block_device_ext/create_mode",
+  :display_name => "Block Device Create Mode (create or restore)", 
   :description => "Mode for Block Device Ext. create: creates new block store    restore: restore from existing snapshot",
   :required => true,
   :choice => ["create", "restore"],
   :type => "string",  
-  :recipes => ["block_device::default"]
+  :recipes => ["block_device_ext::default"]
 
 
 attribute "block_device/timestamp_override",
