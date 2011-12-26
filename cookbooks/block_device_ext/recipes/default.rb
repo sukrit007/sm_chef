@@ -7,6 +7,12 @@
 # All rights reserved - Do Not Redistribute
 #
 
-puts 'Block Device Ext :: default'
-puts "node #{node[:block_device][:storage_type]}"
-include_recipe "block_device::setup_block_device" 
+Chef::Log.info("Block Device Ext :: default for mode: #{node[:block_device_ext][:create_mode]}")
+Chef::Log.info("node #{node[:block_device][:storage_type]}"
+
+if node[:block_device][:storage_type] == "create"
+	include_recipe "block_device::setup_block_device"
+else
+	include_recipe "block_device::do_restore"
+fi
+	
