@@ -10,13 +10,13 @@
 Chef::Log.info("Block Device Ext :: default for mode: #{node[:block_device_ext][:create_mode]}")
 Chef::Log.info("node #{node[:block_device][:storage_type]}"
 
-create_mode = node[:block_device][:create_mode]
+create_mode = node[:block_device_ext][:create_mode]
 case node[:block_device][:create_mode]
 	when "create" then
 		include_recipe "block_device::setup_block_device"
 	when "restore" then
 		include_recipe "block_device::do_restore"
 	else
-		Chef::Log.error("Option not supported"		
+		Chef::Log.error("Option not supported")		
 end
 	
