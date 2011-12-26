@@ -19,4 +19,3 @@ Chef::Log.info("Block Device Ext :: default for mode: #{node[:block_device_ext][
 #	else
 #		Chef::Log.error("Option not supported")		
 #end 
-	
