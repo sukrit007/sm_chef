@@ -18,5 +18,5 @@ Chef::Log.info("Block Device Ext :: default for mode: #{node[:block_device_ext][
 #		include_recipe "block_device::do_restore"
 #	else
 #		Chef::Log.error("Option not supported")		
-#end
+#end 
 	
