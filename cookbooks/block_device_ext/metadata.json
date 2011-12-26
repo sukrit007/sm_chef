@@ -101,21 +101,6 @@
       "display_name": "Total Volume Size",
       "description": "Defines the total size of the LVM volume stripe set (in GB).  For example, if the stripe_count is '3' and you specify '3' for this attribute, it will create an LVM volume stripe that contains 3 volumes that are each 1GB in size.  If an uneven ratio is defined, volume sizes will be rounded up to the nearest whole integer."
     },
-    "block_device/rackspace_snet": {
-      "required": "optional",
-      "calculated": false,
-      "choice": [
-        "true",
-        "false"
-      ],
-      "default": "true",
-      "type": "string",
-      "recipes": [
-        "block_device_ext::default"
-      ],
-      "display_name": "Rackspace SNET",
-      "description": "Use Rackspace internal private networking (preferred)"
-    },
     "block_device/cron_backup_hour": {
       "required": "optional",
       "calculated": false,

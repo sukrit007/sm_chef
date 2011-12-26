@@ -137,14 +137,6 @@ attribute "block_device/mount_dir",
   :required => false,
   :recipes => ["block_device_ext::default"]
 
-attribute "block_device/rackspace_snet",
-  :display_name => "Rackspace SNET",
-  :description => "Use Rackspace internal private networking (preferred)",
-  :type => "string",
-  :choice => ["true", "false"],
-  :default => "true",
-  :required => false,
-  :recipes => ["block_device_ext::default"]
 
 
 
