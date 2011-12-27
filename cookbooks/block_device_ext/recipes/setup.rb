@@ -11,7 +11,7 @@ Chef::Log.info("Block Device Ext :: setup for mode: #{node[:block_device_ext][:c
 
 case ENV['RS_REBOOT']
 	when "true" then
-		Chef::Log.error("Skip setup on reboot")	
+		Chef::Log.info("Skip setup on reboot")	
 	else
 		create_mode = "#{node[:block_device_ext][:create_mode]}"
 		case create_mode
