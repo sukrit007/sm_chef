@@ -9,14 +9,18 @@
 
 Chef::Log.info("Block Device Ext :: setup for mode: #{node[:block_device_ext][:create_mode]}")
 
-
-create_mode = "#{node[:block_device_ext][:create_mode]}"
-case create_mode
-	when "create" then
-		include_recipe "block_device::setup_block_device"
-	when "restore" then
-		include_recipe "block_device::do_restore"
+case ENV['RS_REBOOT']
+	when "true" then
+		Chef::Log.error("Skip setup on reboot")	
 	else
-		Chef::Log.error("Option not supported")		
+		create_mode = "#{node[:block_device_ext][:create_mode]}"
+		case create_mode
+			when "create" then
+				include_recipe "block_device::setup_block_device"
+			when "restore" then
+				include_recipe "block_device::do_restore"
+			else
+				Chef::Log.error("Option not supported")		
+	end
 end
 	
